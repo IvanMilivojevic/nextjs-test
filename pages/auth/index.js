@@ -9,11 +9,11 @@ const authIndexPage = (props) => (
   </div>
 );
 
-authIndexPage.getInitialProps = context => {
-  const promise = new Promise((resolve, reject) => {
+authIndexPage.getInitialProps = () => {
+  const promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve({ appName: "Super App (Auth)" });
-    }, 5000);
+    }, 0);
   });
   return promise;
 };
